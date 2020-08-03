@@ -10,7 +10,7 @@ func main0501() {
 	//内存地址编号为0的空间是系统占用  不允许进行读写操作
 	//var m map[int]string  //内存地址编号为0x0
 	//map存储的方式不是顺序存储的
-	var m map[int]string = map[int]string{101: "法师", 251: "张超", 666: "怡红"}
+	var m = map[int]string{101: "法师", 251: "张超", 666: "怡红"}
 	//m[101]="法师"
 
 	//fmt.Printf("%p\n", m)
