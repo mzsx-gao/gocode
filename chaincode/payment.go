@@ -13,7 +13,15 @@ type PaymentChaincode struct {
 //初始化两个账户及相应的余额
 //-c '{"Args":["init","第一个账户名称","第一个账户初始余额","第二个账户名称","第二个账户初始余额"]}'
 func (t *PaymentChaincode) Init(stub shim.ChaincodeStubInterface) peer.Response {
-	fmt.Println(stub)
+	fmt.Println("Init方法...")
+	fmt.Println("交易ID：" + stub.GetTxID())
+	fmt.Println("通道ID：" + stub.GetChannelID())
+	fmt.Print("参数：")
+	for _, v := range stub.GetArgs() {
+		fmt.Print(string(v))
+	}
+	fmt.Println("结束...")
+
 	//获取参数并验证
 	_, args := stub.GetFunctionAndParameters()
 	if len(args) != 4 {
@@ -52,7 +60,14 @@ func (t *PaymentChaincode) Init(stub shim.ChaincodeStubInterface) peer.Response 
 
 //peer chaincode query -n pay -C myc -c '{"Args":["find","a"]}'
 func (t *PaymentChaincode) Invoke(stub shim.ChaincodeStubInterface) peer.Response {
-	fmt.Println(stub)
+	fmt.Println("Invoke方法...")
+	fmt.Println("交易ID：" + stub.GetTxID())
+	fmt.Println("通道ID：" + stub.GetChannelID())
+	fmt.Print("参数：")
+	for _, v := range stub.GetArgs() {
+		fmt.Print(string(v))
+	}
+	fmt.Println("结束...")
 	//获取用户意图
 	fun, args := stub.GetFunctionAndParameters()
 	if fun == "find" {
@@ -86,6 +101,7 @@ func find(stub shim.ChaincodeStubInterface, args []string) peer.Response {
 	return shim.Success(result)
 }
 
+//转账功能
 // -c '{"Args":["payment", "源账户名称", "目标账户名称", "转账金额"]}'
 func payment(stub shim.ChaincodeStubInterface, args []string) peer.Response {
 	if len(args) != 3 {
@@ -220,4 +236,12 @@ func (t *PaymentChaincode) get(stub shim.ChaincodeStubInterface, args []string) 
 		return shim.Error("提取失败, 保存数据时发生错误")
 	}
 	return shim.Success([]byte("提取成功"))
+}
+
+func main() {
+	err := shim.Start(new(PaymentChaincode))
+	if err != nil {
+		fmt.Print("启动 PaymentChaincode时发生错误：%s", err)
+	}
+	fmt.Println("链码启动成功")
 }

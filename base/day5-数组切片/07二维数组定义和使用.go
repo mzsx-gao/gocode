@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main0701() {
 
@@ -42,4 +44,5 @@ func main() {
 	// var arr[2][3]int=[2][3]int{1:{1:1}}
 	arr := [2][3]int{{1, 2, 3}, {2, 3}}
 	fmt.Println(arr)
+
 }

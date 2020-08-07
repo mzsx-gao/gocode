@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"gocode/base/day7-指针"
+)
 
 type Student struct {
 	id    int
@@ -25,7 +28,7 @@ func main0201() {
 
 	fmt.Println(stu)
 }
-func test1(m map[int]student) {
+func test1(m map[int]day7_指针.student) {
 	//指针不能直接.成员
 	//m[102].name = "威震天"//err
 
@@ -39,11 +42,11 @@ func test1(m map[int]student) {
 func main() {
 
 	//将结构体作为map中的value
-	m := make(map[int]student)
+	m := make(map[int]day7_指针.student)
 
 	//map中的数据不建议排序操作
-	m[101] = student{"擎天柱", "男", 30, 100, "赛博坦星球"}
-	m[102] = student{"大黄蜂", "男", 10, 59, "赛博坦星球"}
+	m[101] = day7_指针.student{"擎天柱", "男", 30, 100, "赛博坦星球"}
+	m[102] = day7_指针.student{"大黄蜂", "男", 10, 59, "赛博坦星球"}
 
 	//将map作为函数参数
 	test1(m)

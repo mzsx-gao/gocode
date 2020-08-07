@@ -4,7 +4,7 @@ import "fmt"
 
 //结构体定义在函数外部
 //定义函数类型
-//type  functye func(int,int)int
+//type  functype func(int,int)int
 
 //type 结构体名 struct {
 //	结构体成员列表
@@ -57,7 +57,7 @@ func main0902() {
 	fmt.Printf("%p\n", &stu.addr)
 }
 
-func main() {
+func main0903() {
 	stu := student{102, "聂荣臻", 60, "男", 101, "湖南"}
 
 	//将结构体变量赋值
