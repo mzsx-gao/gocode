@@ -45,7 +45,8 @@ func main0902() {
 	fmt.Printf("%p\n", slice)
 	fmt.Println(slice)
 }
-func main() {
+
+func main0903() {
 	slice := []int{1, 2, 3, 4, 5}
 
 	fmt.Println("长度", len(slice))

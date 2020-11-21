@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main0101() {
+func main() {
 
 	//if 表达式
 	//{
@@ -34,7 +34,4 @@ func main0101() {
 	} else {
 		fmt.Println("我要上传智")
 	}
-
-	var m int
-
 }

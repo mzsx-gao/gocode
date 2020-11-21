@@ -6,13 +6,6 @@ import "fmt"
 //定义函数类型
 //type  functype func(int,int)int
 
-//type 结构体名 struct {
-//	结构体成员列表
-//	成员名 数据类型
-//	姓名 string
-//	age int
-//}
-
 //结构体是全局的可以在项目所有文件使用
 //结构体是一种数据类型
 type student struct {
@@ -44,7 +37,7 @@ func main0901() {
 	stu := student{name: "孙殿英", score: 60, sex: "男", addr: "北平", id: 1, age: 42}
 	fmt.Println(stu)
 }
-func main0902() {
+func main() {
 	stu := student{101, "朱德", 60, "男", 101, "四川"}
 
 	fmt.Printf("%p\n", &stu)

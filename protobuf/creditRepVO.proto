@@ -1,0 +1,31 @@
+syntax = "proto3";
+package response;
+//option java_multiple_files = true;
+//option java_package = "com.middleEnd.model";
+
+// 供应商额度信息
+message CreditLineInfoVO {
+	string vendorCode = 1;
+	string vendorName = 2;
+	double creditLine = 3; // 授信额度
+	double availableAmt = 4; // 可用额度
+	string expiredDate = 5;
+	string creditApplyNo = 6;
+	string createDate = 7;
+	string updateDate = 8;
+	string status = 9;
+	double costAmt = 10;
+}
+
+// 授信信息查询返回报文格式
+message QueryCreditInfoRespVO {
+	string vendorCode = 1;
+	string vendorName = 2;
+	string status = 3;
+	double auditCreditLine = 4; // 审核金额
+	string expiredDate = 5;
+	string auditDate = 6;
+	string remark = 7;
+	string personalCreditReport = 8;
+	string fileName = 9; //个人信用报告文件名
+}
