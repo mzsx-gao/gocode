@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Clib"
 	"fmt"
+	"gocode/base/贪吃蛇/Clib"
 	"math/rand"
 	"os"
 	"time"
