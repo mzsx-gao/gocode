@@ -17,27 +17,28 @@ type student struct {
 	addr  string
 }
 
-func main0901() {
+func main() {
 
 	//定义结构体变量 复合类型
 	//var 变量名 结构体名
-	//var stu student
-	//
-	////为结构体成员赋值 包名.函数名 结构体.成员  对象.方法
-	//stu.name = "张大帅"
-	//stu.score = 99
-	//stu.addr = "奉天皇姑"
-	//stu.sex = "男"
-	//stu.age = 58
-	//stu.id = 1
+	stu := student{}
 
-	//定义结构体是为成员赋值
+	//为结构体成员赋值 包名.函数名 结构体.成员  对象.方法
+	stu.name = "张大帅"
+	stu.score = 99
+	stu.addr = "奉天皇姑"
+	stu.sex = "男"
+	stu.age = 58
+	stu.id = 1
+
+	//2.定义结构体是为成员赋值
 	//var stu student = student{1, "张宗昌", 49, "男", 5, "山东济南"}
-	//自动推导类型和指定成员赋值
-	stu := student{name: "孙殿英", score: 60, sex: "男", addr: "北平", id: 1, age: 42}
+
+	//3.自动推导类型和指定成员赋值
+	//stu := student{name: "孙殿英", score: 60, sex: "男", addr: "北平", id: 1, age: 42}
 	fmt.Println(stu)
 }
-func main() {
+func main0902() {
 	stu := student{101, "朱德", 60, "男", 101, "四川"}
 
 	fmt.Printf("%p\n", &stu)

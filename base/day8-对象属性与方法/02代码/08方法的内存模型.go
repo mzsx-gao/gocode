@@ -26,6 +26,5 @@ func main() {
 	//地址传递(*student6) 值传递(student6)
 	//一般建议选择地址传递
 	stu.Print()
-
 	fmt.Println(stu)
 }

@@ -21,7 +21,6 @@ func main0201() {
 	fmt.Printf("%c\n", b)
 }
 func main0202() {
-
 	var a byte = 'a'
 	//将小写字母转成大写字母输出
 	fmt.Printf("%c", a-32)

@@ -19,7 +19,6 @@ func main0101() {
 }
 
 //买黄瓜 3.2一斤 买3斤
-
 func main() {
 	price := 3.2
 	var weight float64

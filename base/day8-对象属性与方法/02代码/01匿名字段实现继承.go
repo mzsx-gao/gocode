@@ -17,9 +17,8 @@ type Student struct {
 	//将Person结构体作为student结构体的成员
 	//p Person//为person结构体起名字
 	Person //匿名字段实现继承关系
-
-	class int
-	score int
+	class  int
+	score  int
 }
 
 func main0101() {

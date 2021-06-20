@@ -2,13 +2,14 @@ package main
 
 import "fmt"
 
+/*
+数组定义:
+var 数据名 [元素个数]数据类型
+
+切片定义:
+var 切片名 []数据类型
+*/
 func main0801() {
-
-	//数组定义
-	//var 数据名 [元素个数]数据类型
-
-	//切片定义
-	//var 切片名 []数据类型
 
 	var slice []int = []int{1, 2, 3, 4, 5}
 	slice[0] = 123
@@ -31,7 +32,7 @@ func main0801() {
 	//	fmt.Println(i,v)
 	//}
 }
-func main() {
+func main0802() {
 	//切片赋值
 	//var slice []int
 	//slice[0]=123//err切片下标越界

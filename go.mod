@@ -9,6 +9,8 @@ require (
 	github.com/hashicorp/go-version v1.2.1 // indirect
 	github.com/hyperledger/fabric v1.2.0
 	github.com/hyperledger/fabric-amcl v0.0.0-20200424173818-327c9e2cf77a // indirect
+	github.com/hyperledger/fabric-chaincode-go v0.0.0-20210603161043-af0e3898842a
+	github.com/hyperledger/fabric-contract-api-go v1.1.1
 	github.com/hyperledger/fabric-sdk-go v1.0.0-beta2
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

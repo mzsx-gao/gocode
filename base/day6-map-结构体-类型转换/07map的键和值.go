@@ -63,7 +63,5 @@ func main() {
 	delete(m, 101)
 	//delete在进行数据删除时 如果key不存在 不会报错
 	delete(m, 101)
-
 	fmt.Println(m)
-
 }

@@ -11,7 +11,6 @@ type person8 struct {
 
 type student8 struct {
 	person8
-
 	class int
 	score int
 	addr  string

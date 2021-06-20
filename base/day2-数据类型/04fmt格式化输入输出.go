@@ -2,16 +2,13 @@ package main
 
 import "fmt"
 
-func main0401() {
-
+func main() {
 	//fmt.Printf("35%%")
-
 	//十进制整型数据
 	a := 123
-
 	//%b 占位符 打印一个数据的二进制格式
 	fmt.Printf("%b\n", a)
-	//%o 占位符 打印一个数据的二进制格式
+	//%o 占位符 打印一个数据的八进制格式
 	fmt.Printf("%o\n", a)
 	//%x %X 占位符 十六进制
 	//10-15用a-f表示 %x  a-f  %X A-F
@@ -21,26 +18,20 @@ func main0401() {
 	fmt.Println(a)
 	fmt.Printf("%d\n", a)
 
-}
-
-func main0402() {
+	fmt.Printf("%s\n", "示例二：############################################")
 	//十进制数据
-	var a int = 10
+	var a1 int = 10
 	//八进制数据  八进制数据是以0开头  最大值为7
 	var b int = 010
 	//十六进制数据  十六进制数据是以0x开头
 	//10-15用a-f表示 %x  a-f  %X A-F
 	var c int = 0xABC
-
 	//二进制  不能在go语言中直接表示
-
-	fmt.Println(a)
+	fmt.Println(a1)
 	fmt.Println(b)
 	fmt.Println(c)
 
-}
-
-func main() {
+	fmt.Printf("%s\n", "示例三：############################################")
 	//''引起来的智能存储一个字符
 	ch := 'a' //'\n'
 	str := "瓜娃子"
@@ -52,9 +43,9 @@ func main() {
 	fmt.Printf("%p\n", &ch)
 	fmt.Printf("%p\n", &str)
 
-	a := false
-
+	a2 := false
 	//%t占位符 打印bool类型的值
-	fmt.Printf("%t\n", a)
-	fmt.Println(a)
+	fmt.Printf("%t\n", a2)
+	fmt.Println(a2)
+
 }

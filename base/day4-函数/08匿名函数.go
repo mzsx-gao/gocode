@@ -11,13 +11,10 @@ func main0801() {
 
 	//在函数内部定义一个匿名函数
 	//f 函数类型变量 接收函数
-
 	var f FuncType
-
 	f = func(a int, b int) {
 		fmt.Println(a + b)
 	}
-
 	f(a, b)
 	//fmt.Println(f)
 
